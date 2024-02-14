@@ -41,5 +41,31 @@ enviarLogin.addEventListener("click", (e)=>{
         console.error('Error:', error);
       });
 
-    console.log("enviado!");
+    console.log("enviado login!");
+});
+
+let enviarRegister = document.getElementById("enviarRegister");
+enviarRegister.addEventListener("click", (e)=>{
+    e.preventDefault();
+
+    let registerUsuario = document.getElementById("registerUsuario").value;
+    let registerPassword = document.getElementById("registerPassword").value;
+    let registerAlias = document.getElementById("registerAlias").value;
+
+    fetch('ENDPOINT', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ registerUsuario: registerUsuario, registerPassword: registerPassword, registerAlias: registerAlias })
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+
+    console.log("enviado register!");
 });
