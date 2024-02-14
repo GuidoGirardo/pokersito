@@ -62,7 +62,7 @@ body{
     border-radius: 5px;
     padding: 5px 0 5px 10px;
 }
-#enviarLogin{
+#enviarLogin, #enviarRegister{
     width: 7em;
     height: 2em;
     border-radius: 5px;
