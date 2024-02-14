@@ -35,12 +35,15 @@ enviarLogin.addEventListener("click", (e)=>{
       })
       .then(response => response.json())
       .then(data => {
-        console.log(data);
+        // document.getElementById("window2").style.display = "flex";
+        // document.getElementById("window1").style.display = "none";
       })
       .catch(error => {
         console.error('Error:', error);
       });
-
+    
+    document.getElementById("window2").style.display = "flex";
+    document.getElementById("window1").style.display = "none";
     console.log("enviado login!");
 });
 
