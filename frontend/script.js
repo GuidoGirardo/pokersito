@@ -72,3 +72,42 @@ enviarRegister.addEventListener("click", (e)=>{
 
     console.log("enviado register!");
 });
+
+// window2
+let btnCrearMesaPrivada = document.getElementById("btnCrearMesaPrivada");
+let btnUnirseAMesaPrivada = document.getElementById("btnUnirseAMesaPrivada");
+let btnCargarSaldo = document.getElementById("btnCargarSaldo");
+let btnRetirarSaldo = document.getElementById("btnRetirarSaldo");
+let crearMesaPrivada = document.getElementById("crearMesaPrivada");
+let unirseAMesaPrivada = document.getElementById("unirseAMesaPrivada");
+let cargarSaldo = document.getElementById("cargarSaldo");
+let retirarSaldo = document.getElementById("retirarSaldo");
+let cerrarCrearMesaPrivada = document.getElementById("cerrarCrearMesaPrivada");
+let cerrarUnirseAMesaPrivada = document.getElementById("cerrarUnirseAMesaPrivada");
+let cerrarCargarSaldo = document.getElementById("cerrarCargarSaldo");
+let cerrarRetirarSaldo = document.getElementById("cerrarRetirarSaldo");
+
+btnCrearMesaPrivada.addEventListener("click", ()=>{
+  crearMesaPrivada.style.display = "flex";
+});
+cerrarCrearMesaPrivada.addEventListener("click", ()=>{
+  crearMesaPrivada.style.display = "none";
+});
+btnUnirseAMesaPrivada.addEventListener("click", ()=>{
+  unirseAMesaPrivada.style.display = "flex";
+});
+cerrarUnirseAMesaPrivada.addEventListener("click", ()=>{
+  unirseAMesaPrivada.style.display = "none";
+});
+btnCargarSaldo.addEventListener("click", ()=>{
+  cargarSaldo.style.display = "flex";
+});
+cerrarCargarSaldo.addEventListener("click", ()=>{
+  cargarSaldo.style.display = "none";
+});
+btnRetirarSaldo.addEventListener("click", ()=>{
+  retirarSaldo.style.display = "flex";
+});
+cerrarRetirarSaldo.addEventListener("click", ()=>{
+  retirarSaldo.style.display = "none";
+});
