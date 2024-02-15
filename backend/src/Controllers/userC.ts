@@ -4,7 +4,9 @@ import userM from "../Models/userM";
 
 type User = {
     name: string, 
-    password: string
+    password: string,
+    bankBalance?: string,
+    uniformBankCode?: string
 }
 
 class UserC {
@@ -22,8 +24,24 @@ class UserC {
     res.status(201).json({ msg: `user created with sucess.`, user })
   }
 
-  register(req: Request, res: Response) {
+  async register(req: Request, res: Response) {
+    const { name, password, uniformBankCode} = req.body as User;
+    
+    const doesUserExists = await userM.findOne({name,password})
+  
+    if(doesUserExists) {
+     doesUserExists.uniformBankCode = uniformBankCode
+     const savedUser = await doesUserExists.save()
 
+     const registeredUser = {
+      name: savedUser.name, 
+      password: savedUser.password
+    }
+     return res.status(201).json({msg: `user registered with sucess.`, registeredUser})
+    }
+
+    const user = await userM.create({name, password, uniformBankCode})
+    res.status(201).json({ msg: `user created with sucess.`, user });
   }
 }
 

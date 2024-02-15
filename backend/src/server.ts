@@ -17,10 +17,10 @@ class Server {
     }
 
     private startServer(port: string) {
-        this.app.use((error: Error, req: Request, res: Response)=>{
-           console.log(error.stack);
+        this.app.use((error: Error, req: Request, res: Response, next: NextFunction)=>{
+           console.error(error.stack);
            
-           res.status(500).json(error.message)
+           return res.status(500).json(error.message)
         })
         this.app.listen(port)
         console.log(`Server running on port ${port}`)

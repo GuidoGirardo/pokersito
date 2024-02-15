@@ -46,26 +46,24 @@ let enviarRegister = document.getElementById("enviarRegister");
 enviarRegister.addEventListener("click", async e => {
   e.preventDefault();
 
-  let registerUsuario = document.getElementById("registerUsuario").value;
-  let registerPassword = document.getElementById("registerPassword").value;
-  let registerAlias = document.getElementById("registerAlias").value;
+  let name = document.getElementById("registerUsuario").value;
+  let password = document.getElementById("registerPassword").value;
+  let uniformBankCode = document.getElementById("registerAlias").value;
 
-  const response = await fetch("ENDPOINT", {
+  const response = await fetch("http://localhost:3000/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      registerUsuario: registerUsuario,
-      registerPassword: registerPassword,
-      registerAlias: registerAlias,
+      name, password, uniformBankCode
     }),
   })
     .catch((error) => {
       console.error("Error:", error);
     });
  
-  console.log("enviado register!", response);
+  console.log("enviado register!", await response.text());
 });
 
 // window2

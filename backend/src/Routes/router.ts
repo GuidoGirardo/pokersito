@@ -12,7 +12,7 @@ class Router {
     private configRouter(){
      this.application
        .post('/startsession', promiseErrorHandler(userC.startSession))
-       .post('/register', )
+       .post('/register', promiseErrorHandler(userC.register))
     }
 
     get router(){
