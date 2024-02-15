@@ -45,18 +45,40 @@
         <div class="opcionesMesas" id="crearMesaPrivada">
             <button class="cerrarOpcionesMesa" id="cerrarCrearMesaPrivada">x</button>
             crear mesa privada
+            <form>
+                <input type="text" id="codigoCrearMesaPrivada" placeholder="código...">
+                <div id="radioCrearMesaPrivada">
+                    <label><input type="radio" name="opcion" value="opcion1"> 10/20</label>
+                    <label><input type="radio" name="opcion" value="opcion2"> 50/100</label>
+                    <label><input type="radio" name="opcion" value="opcion3"> 100/200</label>
+                </div>
+                <button id="enviarCrearMesaPrivada">enviar</button>
+            </form>
         </div>
         <div class="opcionesMesas" id="unirseAMesaPrivada">
             <button class="cerrarOpcionesMesa" id="cerrarUnirseAMesaPrivada">x</button>
             unirse a mesa privada
+            <form>
+                <input type="text" id="idUnirseAMesaPrivada" placeholder="id...">
+                <input type="text" id="codigoUnirseAMesaPrivada" placeholder="código...">
+                <button id="enviarUnirseAMesaPrivada">enviar</button>
+            </form>
         </div>
         <div class="opcionesMesas" id="cargarSaldo">
             <button class="cerrarOpcionesMesa" id="cerrarCargarSaldo">x</button>
             cargar saldo
+            <form>
+                <input type="number" id="cantidadCargarSaldo" placeholder="$1.000 - $100.000">
+                <button id="enviarCargarSaldo">enviar</button>
+            </form>
         </div>
         <div class="opcionesMesas" id="retirarSaldo">
             <button class="cerrarOpcionesMesa" id="cerrarRetirarSaldo">x</button>
             retirar saldo
+            <form>
+                <input type="number" id="cantidadRetirarSaldo" placeholder="$1.000 - $100.000">
+                <button id="enviarRetirarSaldo">enviar</button>
+            </form>
         </div>
     </div>
 
