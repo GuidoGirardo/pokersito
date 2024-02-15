@@ -1,14 +1,15 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
-body{
+
+body {
     background-color: rgb(161, 35, 35);
     color: #dedede;
 }
 
 /* window1 */
-#window1{
+#window1 {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -17,7 +18,9 @@ body{
     flex-direction: column;
     gap: 15px 0;
 }
-#btnLogin, #btnRegister{
+
+#btnLogin,
+#btnRegister {
     width: 10em;
     height: 3em;
     border: 4px solid #dedede;
@@ -27,7 +30,9 @@ body{
     border-radius: 5px;
     font-size: 1em;
 }
-#login, #register{
+
+#login,
+#register {
     width: 80%;
     height: 50%;
     display: flex;
@@ -41,7 +46,9 @@ body{
     position: absolute;
     display: none;
 }
-#btnCloseLogin, #btnCloseRegister{
+
+#btnCloseLogin,
+#btnCloseRegister {
     position: absolute;
     cursor: pointer;
     top: 5px;
@@ -51,18 +58,24 @@ body{
     border-radius: 5px;
     border: 2px solid #dedede;
 }
-#login form, #register form{
+
+#login form,
+#register form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 15px 0;
 }
-#login form input, #register form input{
+
+#login form input,
+#register form input {
     border-radius: 5px;
     padding: 5px 0 5px 10px;
 }
-#enviarLogin, #enviarRegister{
+
+#enviarLogin,
+#enviarRegister {
     width: 7em;
     height: 2em;
     border-radius: 5px;
@@ -70,7 +83,7 @@ body{
 }
 
 /* window2 */
-#window2{
+#window2 {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -79,7 +92,8 @@ body{
     flex-direction: column;
     display: none;
 }
-#infoUsuarioSaldo{
+
+#infoUsuarioSaldo {
     width: 100%;
     height: fit-content;
     padding-top: 10px;
@@ -89,7 +103,8 @@ body{
     display: flex;
     justify-content: space-around;
 }
-#opcionesWindow2{
+
+#opcionesWindow2 {
     width: 80%;
     height: 50%;
     display: flex;
@@ -98,7 +113,8 @@ body{
     flex-direction: column;
     gap: 15px 0;
 }
-.botonesMesas{
+
+.botonesMesas {
     width: 100%;
     height: 15%;
     border-radius: 10px;
@@ -108,14 +124,17 @@ body{
     font-size: 1em;
     cursor: pointer;
 }
-.botonesMesas:nth-child(3){
+
+.botonesMesas:nth-child(3) {
     margin-top: 30px;
     background-color: rgb(132, 32, 32);
 }
-.botonesMesas:nth-child(4){
+
+.botonesMesas:nth-child(4) {
     background-color: rgb(132, 32, 32);
 }
-.opcionesMesas{
+
+.opcionesMesas {
     position: absolute;
     height: 50%;
     width: 80%;
@@ -129,7 +148,8 @@ body{
     border: 4px solid #dedede;
     display: none;
 }
-.cerrarOpcionesMesa{
+
+.cerrarOpcionesMesa {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -139,24 +159,31 @@ body{
     border: 2px solid #dedede;
     cursor: pointer;
 }
-.opcionesMesas form{
+
+.opcionesMesas form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 15px 0;
 }
-.opcionesMesas form input{
+
+.opcionesMesas form input {
     border-radius: 5px;
     padding: 5px 0 5px 10px;
 }
-#enviarCrearMesaPrivada, #enviarUnirseAMesaPrivada, #enviarCargarSaldo, #enviarRetirarSaldo{
+
+#enviarCrearMesaPrivada,
+#enviarUnirseAMesaPrivada,
+#enviarCargarSaldo,
+#enviarRetirarSaldo {
     width: 7em;
     height: 2em;
     border-radius: 5px;
     cursor: pointer;
 }
-#radioCrearMesaPrivada{
+
+#radioCrearMesaPrivada {
     width: 100%;
     height: fit-content;
     display: flex;
