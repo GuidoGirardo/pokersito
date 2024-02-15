@@ -111,3 +111,45 @@ btnRetirarSaldo.addEventListener("click", ()=>{
 cerrarRetirarSaldo.addEventListener("click", ()=>{
   retirarSaldo.style.display = "none";
 });
+
+// menu principal
+// crear mesa privada
+let enviarCrearMesaPrivada = document.getElementById("enviarCrearMesaPrivada");
+enviarCrearMesaPrivada.addEventListener("click", (e)=>{
+  e.preventDefault();
+  let codigoCrearMesaPrivada = document.getElementById("codigoCrearMesaPrivada").value;
+  let radioSeleccionado;
+  if(document.getElementById("radioOpcion1").checked) radioSeleccionado = document.getElementById("radioOpcion1").value;
+  else if(document.getElementById("radioOpcion2").checked) radioSeleccionado = document.getElementById("radioOpcion2").value;
+  else if (document.getElementById("radioOpcion3").checked) radioSeleccionado = document.getElementById("radioOpcion3").value;
+  
+  console.log(codigoCrearMesaPrivada);
+  console.log(radioSeleccionado);
+  
+});
+
+// unirse a mesa privada
+let enviarUnirseAMesaPrivada = document.getElementById("enviarUnirseAMesaPrivada");
+enviarUnirseAMesaPrivada.addEventListener("click", (e)=>{
+  e.preventDefault();
+  let idUnirseAMesaPrivada = document.getElementById("idUnirseAMesaPrivada").value;
+  let codigoUnirseAMesaPrivada = document.getElementById("codigoUnirseAMesaPrivada").value;
+  console.log(idUnirseAMesaPrivada);
+  console.log(codigoUnirseAMesaPrivada);
+});
+
+// cargar saldo
+let enviarCargarSaldo = document.getElementById("enviarCargarSaldo");
+enviarCargarSaldo.addEventListener("click", (e)=>{
+  e.preventDefault();
+  let cantidadCargarSaldo = document.getElementById("cantidadCargarSaldo").value;
+  console.log(cantidadCargarSaldo);
+});
+
+// retirar saldo
+let enviarRetirarSaldo = document.getElementById("enviarRetirarSaldo");
+enviarRetirarSaldo.addEventListener("click", (e)=>{
+  e.preventDefault();
+  let cantidadRetirarSaldo = document.getElementById("cantidadRetirarSaldo").value;
+  console.log(cantidadRetirarSaldo);
+});
