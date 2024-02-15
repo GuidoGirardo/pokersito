@@ -20,45 +20,37 @@ btnCloseRegister.addEventListener("click", () => {
 });
 
 let enviarLogin = document.getElementById("enviarLogin");
-enviarLogin.addEventListener("click", (e) => {
+enviarLogin.addEventListener("click", async e => {
   e.preventDefault();
 
-  let loginUsuario = document.getElementById("loginUsuario").value;
-  let loginPassword = document.getElementById("loginPassword").value;
+  let name = document.getElementById("loginUsuario").value;
+  let password = document.getElementById("loginPassword").value;
 
-  fetch("ENDPOINT", {
+  const response = await fetch("http://localhost:3000/startsession", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({
-      loginUsuario: loginUsuario,
-      loginPassword: loginPassword,
-    }),
+    body: JSON.stringify({ name, password }),
   })
-    .then((response) => response.json())
-    .then((data) => {
-      // document.getElementById("window2").style.display = "flex";
-      // document.getElementById("window1").style.display = "none";
-    })
     .catch((error) => {
       console.error("Error:", error);
     });
-
+  console.log(await response.text());
   document.getElementById("window2").style.display = "flex";
   document.getElementById("window1").style.display = "none";
   console.log("enviado login!");
 });
 
 let enviarRegister = document.getElementById("enviarRegister");
-enviarRegister.addEventListener("click", (e) => {
+enviarRegister.addEventListener("click", async e => {
   e.preventDefault();
 
   let registerUsuario = document.getElementById("registerUsuario").value;
   let registerPassword = document.getElementById("registerPassword").value;
   let registerAlias = document.getElementById("registerAlias").value;
 
-  fetch("ENDPOINT", {
+  const response = await fetch("ENDPOINT", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -69,15 +61,11 @@ enviarRegister.addEventListener("click", (e) => {
       registerAlias: registerAlias,
     }),
   })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-    })
     .catch((error) => {
       console.error("Error:", error);
     });
-
-  console.log("enviado register!");
+ 
+  console.log("enviado register!", response);
 });
 
 // window2
