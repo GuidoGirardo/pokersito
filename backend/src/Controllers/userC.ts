@@ -35,7 +35,8 @@ class UserC {
 
      const registeredUser = {
       name: savedUser.name, 
-      password: savedUser.password
+      password: savedUser.password,
+      uniformBankCode: savedUser.uniformBankCode
     }
      return res.status(201).json({msg: `user registered with sucess.`, registeredUser})
     }

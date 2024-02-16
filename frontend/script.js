@@ -50,11 +50,8 @@ enviarRegister.addEventListener("click", async e => {
   let password = document.getElementById("registerPassword").value;
   let uniformBankCode = document.getElementById("registerAlias").value;
 
-<<<<<<<<< Temporary merge branch 1
-  fetch("http://localhost:3000/register", {
-=========
-  const response = await fetch("ENDPOINT", {
->>>>>>>>> Temporary merge branch 2
+
+  const response = await fetch("http://localhost:3000/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -67,9 +64,8 @@ enviarRegister.addEventListener("click", async e => {
       console.error("Error:", error);
     });
  
-  console.log("enviado register!", response);
->>>>>>>>> Temporary merge branch 2
-});
+  console.log("enviado register!", await response.text());
+
 
 // window2
 let btnCrearMesaPrivada = document.getElementById("btnCrearMesaPrivada");
@@ -166,4 +162,5 @@ enviarRetirarSaldo.addEventListener("click", (e) => {
     "cantidadRetirarSaldo"
   ).value;
   console.log(cantidadRetirarSaldo);
-});
+})
+})
